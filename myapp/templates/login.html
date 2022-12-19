@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="login">
+        {% extends 'index.html' %} 
+        {% block title %}
+        Login
+        {% endblock %} 
+        {% block body %}
+        <button class="btn btn-warning">
+        <h2>Login</h2>
+
+        
+
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="uname" placeholder="User Name">
+                <br><br>
+                <input type="text" name="email" placeholder="email">
+                <br><br>
+                <input type="text" name="pwd" placeholder="Password">
+                <br><br>
+                <input type="submit" name="submit" value="Login">
+                <button class="btn btn-warning"><a><a href="{% url 'signup' %}">Sign Up</a> </a>
+                
+            </button>
+        </button>
+
+        {% endblock %}
+
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>
